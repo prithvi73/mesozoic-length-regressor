@@ -14,4 +14,4 @@ y = df["length_m"] # Target Matrix
 df = df.drop(["length_m"], axis=1)
 
 # Encoding the non-int cols as well
-X = pd.get_dummies(df, dtype=int).to_numpy # Feature Matrix
+X = pd.get_dummies(df, dtype=int).to_numpy # Features Matrix
