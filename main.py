@@ -5,3 +5,6 @@ from sklearn.ensemble import RandomForestRegressor
 # Reading the data into a dataframe
 df = pd.read_csv("Data/dinosaurs.csv")
 df = df.dropna()
+
+# Dropping unnecessary columns
+df = df.drop(columns=["name", "occurrence_no", "region", "lng", "lat"])
