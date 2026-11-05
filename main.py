@@ -14,4 +14,7 @@ y = df["length_m"] # Target Matrix
 df = df.drop(["length_m"], axis=1)
 
 # Encoding the non-int cols as well
-X = pd.get_dummies(df, dtype=int).to_numpy # Features Matrix
+X = pd.get_dummies(df, dtype=int).to_numpy() # Features Matrix
+
+# Splitting the data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
