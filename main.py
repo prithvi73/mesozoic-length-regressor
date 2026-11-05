@@ -34,3 +34,12 @@ reg.fit(X_train_scaled, y_train)
 y_pred = reg.predict(X_test_scaled)
 mae = mean_absolute_error(y_test, y_pred)
 print(mae)
+
+# Seeing the models output on an individual piece of data
+test_subject = X_test_scaled[0:1]
+actual_length = y_test.to_numpy()[0]
+predicted_length = reg.predict(test_subject)[0]
+
+print(f"Actual length : {actual_length}")
+print(f"Predicted length : {predicted_length}")
+print(f"Difference (Error) : {abs(actual_length - predicted_length):.2f} meters")
